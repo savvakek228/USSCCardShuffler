@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
+    <e p="C:\Users\savva\.nuget\packages\microsoft.net.test.sdk\16.4.0\build\netcoreapp2.1" t="Include">
+      <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
+    </e>
+    <e p="C:\Users\savva\.nuget\packages\microsoft.testplatform.testhost\16.4.0\build\netcoreapp2.1\x64\testhost.dll" t="Include" />
+    <e p="C:\Users\savva\.nuget\packages\microsoft.testplatform.testhost\16.4.0\build\netcoreapp2.1\x64\testhost.exe" t="Include" />
+    <e p="C:\Users\savva\.nuget\packages\nunit3testadapter\3.15.1\build\netcoreapp2.0\nunit.engine.api.dll" t="Include" />
+    <e p="C:\Users\savva\.nuget\packages\nunit3testadapter\3.15.1\build\netcoreapp2.0\nunit.engine.dll" t="Include" />
+    <e p="C:\Users\savva\.nuget\packages\nunit3testadapter\3.15.1\build\netcoreapp2.0\NUnit3.TestAdapter.dll" t="Include" />
+    <e p="C:\Users\savva\.nuget\packages\nunit3testadapter\3.15.1\build\netcoreapp2.0\NUnit3.TestAdapter.pdb" t="Include" />
     <e p="C:\Users\savva\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
     <e p="C:\Users\savva\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_USSCCardShuffler.2085677740.00" t="ExcludeRecursive" />
     <e p="C:\Users\savva\AppData\Roaming\JetBrains\Rider2020.2\consoles\db" t="IncludeRecursive" />
@@ -9,6 +18,24 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="USSCCardShuffler" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Misc" t="Include">
+          <e p="Classes" t="Include">
+            <e p="Card.cs" t="Include" />
+          </e>
+          <e p="Enums" t="Include">
+            <e p="Suit.cs" t="Include" />
+            <e p="Value.cs" t="Include" />
+          </e>
+          <e p="Implementations" t="Include">
+            <e p="FrenchStandardDecks.cs" t="Include" />
+            <e p="ManualShufflingEmulator.cs" t="Include" />
+            <e p="SimpleDeckShuffler.cs" t="Include" />
+          </e>
+          <e p="Interfaces" t="Include">
+            <e p="IDecks.cs" t="Include" />
+            <e p="IShufflingAlgorithm.cs" t="Include" />
+          </e>
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
@@ -20,6 +47,18 @@
         <e p="USSCCardShuffler.csproj" t="IncludeRecursive" />
       </e>
       <e p="USSCCardShuffler.sln" t="IncludeFlat" />
+      <e p="USSCCSAPITests" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="MainFixture.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="USSCCSAPITests.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="USSCCSAPITests.csproj" t="IncludeRecursive" />
+      </e>
     </e>
   </component>
 </project>

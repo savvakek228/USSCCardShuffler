@@ -1,5 +1,8 @@
-﻿namespace USSCTestApp.Misc.Enums
+﻿namespace USSCCardShuffler.Misc.Enums
 {
+    /// <summary>
+    /// Вес
+    /// </summary>
     public enum Value
     {
         Two = 2,

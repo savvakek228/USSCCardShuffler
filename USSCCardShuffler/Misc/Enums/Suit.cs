@@ -1,5 +1,8 @@
-﻿namespace USSCTestApp.Misc.Enums
+﻿namespace USSCCardShuffler.Misc.Enums
 {
+    /// <summary>
+    /// Масть
+    /// </summary>
     public enum Suit
     {
         Clubs,

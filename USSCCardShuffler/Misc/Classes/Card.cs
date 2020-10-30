@@ -1,6 +1,6 @@
-﻿using USSCTestApp.Misc.Enums;
+﻿using USSCCardShuffler.Misc.Enums;
 
-namespace USSCTestApp.Misc.Classes
+namespace USSCCardShuffler.Misc.Classes
 {
     public class Card
     {
@@ -11,6 +11,17 @@ namespace USSCTestApp.Misc.Classes
         {
             Suit = suit;
             Value = value;
+        }
+
+        /// <summary>
+        /// Equals переопределен для корректной работы Assert для ссылочных типов
+        /// </summary>
+        public override bool Equals(object? obj)
+        {
+            var toCompare = obj as Card;
+            if (toCompare == null)
+                return false;
+            return Suit == toCompare.Suit & Value == toCompare.Value;
         }
     }
 }

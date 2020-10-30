@@ -10,11 +10,10 @@ using USSCCardShuffler.Misc.Interfaces;
 namespace USSCCardShufflerUnitTests
 {
     [TestFixture]
-    public class SimpleShufflingAPITests
+    public class MainFixture
     {
-        private FrenchStandardDecks _decks = new FrenchStandardDecks();
-        private readonly Container DIContainer = new Container();
-        
+        private readonly FrenchStandardDecks _decks = new FrenchStandardDecks();
+
         [SetUp]
         public void InitializeFixture()
         {
@@ -64,10 +63,26 @@ namespace USSCCardShufflerUnitTests
         public void SimpleShufflingTest()
         {
             var initialDeck = _decks.Decks["Deck 1"];
-            DIContainer.Register<IShufflingAlgorithm,SimpleDeckShuffler>();
-            DIContainer.Verify();
-            DIContainer.GetInstance<IShufflingAlgorithm>().ShuffleDeck("Deck 1", _decks.Decks);
+            using (Container DIContainer = new Container())
+            {
+                DIContainer.Register<IShufflingAlgorithm,SimpleDeckShuffler>();
+                DIContainer.Verify();
+                DIContainer.GetInstance<IShufflingAlgorithm>().ShuffleDeck("Deck 1", _decks.Decks);
+            }
             Assert.AreNotEqual(_decks.Decks["Deck 1"],initialDeck);
+        }
+
+        [Test]
+        public void ManualShufflingEmulationTest()
+        {
+            var initialDeck = _decks.Decks["Deck 2"];
+            using (Container DIContainer = new Container())
+            {
+                DIContainer.Register<IShufflingAlgorithm,SimpleDeckShuffler>();
+                DIContainer.Verify();
+                DIContainer.GetInstance<IShufflingAlgorithm>().ShuffleDeck("Deck 2", _decks.Decks);
+            }
+            Assert.AreNotEqual(_decks.Decks["Deck 2"],initialDeck);
         }
 
         [TearDown]
